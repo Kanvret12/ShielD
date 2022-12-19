@@ -10,12 +10,10 @@ RUN            apt install libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-
 RUN            apt install libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 ca-certificates fonts-liberation libnss3 lsb-release xdg-utils wget neofetch -y
 RUN            npm -g install npm@latest
 RUN            npm i -g pm2
-RUN            npm install -g puppeteer --unsafe-perm=true -allow-root
 RUN            curl -s https://install.speedtest.net/app/cli/install.deb.sh | bash 
 RUN            apt install speedtest-cli php -y
 RUN            useradd -m -d /home/container container
 RUN            touch BY SHIELD
-RUN            speedtest --accept-license
 RUN            curl https://raw.githubusercontent.com/Kanvret12/BOT-PLUGINS/master/run.js
 USER        container
 ENV         USER=container HOME=/home/container
