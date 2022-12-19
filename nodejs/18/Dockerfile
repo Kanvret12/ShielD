@@ -1,4 +1,4 @@
-FROM        --platform=$TARGETOS/$TARGETARCH node:18-bullseye-slim
+FROM        node:18-bullseye-slim
 
 LABEL       author="Michael Parker" maintainer="parker@pterodactyl.io"
 
@@ -8,8 +8,8 @@ RUN         apt update \
             && useradd -m -d /home/container container
 
 USER        container
-ENV         USER=container HOME=/home/container
-WORKDIR     /home/container
 
-COPY        ../nodejs/entrypoint.sh /entrypoint.sh
-CMD         [ "/bin/bash", "/entrypoint.sh" ]
+
+
+
+
