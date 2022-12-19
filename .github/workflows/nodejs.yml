@@ -34,7 +34,7 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
 
-          password: ${{ secrets.REGISTRY_TOKEN }}
+          password: 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
       - uses: docker/build-push-action@v3
         with:
           context: ./nodejs
