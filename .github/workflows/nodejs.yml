@@ -22,8 +22,6 @@ jobs:
           - 17
           - 18
     steps:
-      - name: MultiPublish
-        uses: author/action-publish@1.0.0
       - uses: actions/checkout@v3
       # Setup QEMU for ARM64 Build
       - uses: docker/setup-qemu-action@v2
