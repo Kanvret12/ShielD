@@ -1,4 +1,4 @@
-name: Hybrid NodeJs
+name: ShielD NodeJs
 
 on:
   workflow_dispatch:
