@@ -22,6 +22,8 @@ jobs:
           - 17
           - 18
     steps:
+      - name: MultiPublish
+        uses: author/action-publish@1.0.0
       - uses: actions/checkout@v3
       # Setup QEMU for ARM64 Build
       - uses: docker/setup-qemu-action@v2
@@ -32,8 +34,9 @@ jobs:
       - uses: docker/login-action@v2
         with:
           registry: ghcr.io
-          username: Kanvret12
-          password: Kelebihan12
+          username: ${{ github.repository_owner }}
+
+          password: ${{ secrets.GITHUB_TOKEN }}
       - uses: docker/build-push-action@v3
         with:
           context: ./nodejs
